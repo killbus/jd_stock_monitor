@@ -1,0 +1,16 @@
+version: "3.7"
+
+services: 
+    monitor:
+        build:
+            context: ./
+        environment: 
+            SKUIDS: |-
+                100002690344
+                100002690350
+            TG_CHAT_ID: ''
+            TG_TOKEN: ''
+            PROVINCEID: ''
+            CITYID: ''
+            TOWNID: ''
+            COUNTYID: ''
