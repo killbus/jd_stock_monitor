@@ -25,7 +25,7 @@ declare -A inStockSkuids
 while true; do
     for id in $SKUIDS; do
 
-        res=$(curl -s "https://c0.3.cn/stocks?type=getstocks&skuIds=$id&area=${PROVINCEID}_${CITYID}_${TOWNID}_${COUNTYID}" -H 'Connection: keep-alive' -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8')
+        res=$(curl -s "https://c0.3.cn/stocks?type=getstocks&skuIds=$id&area=${PROVINCEID}_${CITYID}_${TOWNID}_${COUNTYID}" -H 'Connection: keep-alive' -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36')
         stockstate=$(echo $res | jq -r '.[]["StockState"]')
         skustate=$(echo $res | jq -r '.[]["skuState"]')
         if [ "$stockstate" == 33 ] && [ "$skustate" == 1 ]; then
