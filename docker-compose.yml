@@ -6,11 +6,10 @@ services:
             context: ./
         environment: 
             SKUIDS: |-
-                100002690344
-                100002690350
-            TG_CHAT_ID: ''
-            TG_TOKEN: ''
-            PROVINCEID: ''
-            CITYID: ''
-            TOWNID: ''
-            COUNTYID: ''
+                4163895
+            TG_CHAT_ID: '498139926'
+            TG_TOKEN: '1508784736:AAEOwehf25YOwdkdB_NIsosSxjsi0h4WT8s'
+            PROVINCEID: '19'
+            CITYID: '1684'
+            TOWNID: '19467'
+            COUNTYID: '51437'
